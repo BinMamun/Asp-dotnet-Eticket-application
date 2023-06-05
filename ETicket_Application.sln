@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETicket_Application", "ETicket_Application\ETicket_Application.csproj", "{75B09047-EAF3-4C36-BE36-15605E68BC52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75B09047-EAF3-4C36-BE36-15605E68BC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B09047-EAF3-4C36-BE36-15605E68BC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B09047-EAF3-4C36-BE36-15605E68BC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B09047-EAF3-4C36-BE36-15605E68BC52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBA7945D-08AF-411D-989D-EE2E17A76FBE}
+	EndGlobalSection
+EndGlobal
