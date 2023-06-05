@@ -1,5 +1,7 @@
+using ETicket_Application.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,6 +24,8 @@ namespace ETicket_Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //DbContext Configure
+            services.AddDbContext<AppDbContext>(option=> option.UseSqlServer(Configuration.GetConnectionString("eticketDb")));
             services.AddControllersWithViews();
         }
 
@@ -48,6 +52,7 @@ namespace ETicket_Application
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            AppDbInitializer.Seed(app);
         }
     }
 }
