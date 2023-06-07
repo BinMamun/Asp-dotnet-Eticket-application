@@ -26,6 +26,7 @@ namespace ETicket_Application.Controllers
 
         public async Task<IActionResult> ListIndex()
         {
+            ViewBag.Count = _db.Movies.Count();
             return View(await _db.Movies
                 .Include(x => x.MovieCategory)
                 .Include(x => x.Producer)
