@@ -3,56 +3,6 @@
     ViewData["Title"] = "Index";
 }
 
-@*<div class="row">
-        <h3 class="mb-3 display-6 text-dark text-center">Movies List</h3>
-        <hr />
-        <div class="col-12 d-flex justify-content-end mb-2">
-            <a asp-action="Create" asp-controller="Movies" class="btn btn-warning" title="Add new"><i class="bi bi-plus-square"></i></a>
-        </div>
-        <div class="col-12 d-flex justify-content-center">
-            <table class="table table-hover box-shadow table-borderless ">
-                <thead>
-                    <tr class="table-warning text-center">
-                        <th>Poster</th>
-                        <th>Name</th>
-                        <th>Category</th>
-                        <th>Description</th>
-                        <th>Producer</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Ticket Price</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var m in Model)
-                    {
-                        <tr class="text-center align-middle">
-                            <td>
-                                <img src="@m.Image" class="rounded-circle img" width="50" height="50" />
-                            </td>
-                            <td>@m.Name</td>
-                            <td>@m.MovieCategory.Category</td>
-                            <td>@m.Description</td>
-                            <td>
-                                <a class="text-dark" asp-action="MoviesByProducers" asp-controller="Movies" asp-route-id="@m.ProducerId">@m.Producer.ProducerName</a>
-                            </td>
-                            <td>@m.StartDate.ToShortDateString()</td>
-                            <td>@m.EndDate.ToShortDateString()</td>
-                            <td>@m.Price</td>
-
-                            <td>
-                                <a asp-action="Edit" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
-                                <a asp-action="Detail" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-info"><i class="bi bi-eye"></i></a>
-                                <a asp-action="Delete" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>
-                            </td>
-                        </tr>
-                    }
-                </tbody>
-            </table>
-        </div>
-    </div>*@
-
 
 <div class="row">
     @foreach (var m in Model)

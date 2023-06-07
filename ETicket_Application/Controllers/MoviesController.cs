@@ -23,6 +23,15 @@ namespace ETicket_Application.Controllers
                 .Include(x=> x.Cinema)
                 .ToListAsync()); 
         }
+
+        public async Task<IActionResult> ListIndex()
+        {
+            return View(await _db.Movies
+                .Include(x => x.MovieCategory)
+                .Include(x => x.Producer)
+                .Include(x => x.Cinema)
+                .ToListAsync());
+        }
         public async Task<IActionResult> MoviesByProducers(int id)
         {
             ViewBag.ProducerName = _db.Producers.First(x => x.ProducerId == id).ProducerName;            
