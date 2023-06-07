@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Movie>
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<div class="row">
+        <h3 class="mb-3 display-6 text-dark text-center">Movies List</h3>
+        <hr />
+        <div class="col-12 d-flex justify-content-end mb-2">
+            <a asp-action="Create" asp-controller="Movies" class="btn btn-warning" title="Add new"><i class="bi bi-plus-square"></i></a>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <table class="table table-hover box-shadow table-borderless ">
+                <thead>
+                    <tr class="table-warning text-center">
+                        <th>Poster</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Producer</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Ticket Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var m in Model)
+                    {
+                        <tr class="text-center align-middle">
+                            <td>
+                                <img src="@m.Image" class="rounded-circle img" width="50" height="50" />
+                            </td>
+                            <td>@m.Name</td>
+                            <td>@m.MovieCategory.Category</td>
+                            <td>@m.Description</td>
+                            <td>
+                                <a class="text-dark" asp-action="MoviesByProducers" asp-controller="Movies" asp-route-id="@m.ProducerId">@m.Producer.ProducerName</a>
+                            </td>
+                            <td>@m.StartDate.ToShortDateString()</td>
+                            <td>@m.EndDate.ToShortDateString()</td>
+                            <td>@m.Price</td>
+
+                            <td>
+                                <a asp-action="Edit" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
+                                <a asp-action="Detail" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-info"><i class="bi bi-eye"></i></a>
+                                <a asp-action="Delete" asp-controller="Movies" asp-route-ActorId="@m.MovieId" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>*@
+
+
+<div class="row">
+    @foreach (var m in Model)
+    {
+        <div class="col-md-4 col-xs-6 border-warning mb-2">
+            <div class="card mb-2" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div>
+                        <div class="col-md-12">
+                            <div class="card-header bg-warning bg-opacity-50">
+                                <h5 class="card-title">
+                                    @m.Name
+                                    <a class="btn btn-sm btn-outline-dark float-end" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                                </h5>
+                            </div>
+                            <div>
+                                <div class="row mb-1">
+                                    <div class="col-md-6">
+                                        <img src="@m.Image" width="100%" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card-body">
+                                            <p class="card-text">@m.Description</p>
+                                            <p class="card-text"><b>Cinema:</b> @m.Cinema.Name</p>
+                                            <p class="card-text"><b>Category:</b> @m.MovieCategory.Category</p>
+                                            <p class="card-text"><b>Producer:</b> @m.Producer.ProducerName</p>
+                                            <p class="card-text"><b>Start Date:</b> @m.StartDate.ToShortDateString()</p>
+                                            <p class="card-text"><b>End Date:</b> @m.EndDate.ToShortDateString()</p>
+                                            <p class="card-text">
+                                                <b>Status:</b>
+                                                @if (DateTime.Now >= m.StartDate && DateTime.Now <= m.EndDate)
+                                                {
+                                                    <span class="badge bg-success text-white">AVAILABLE</span>
+                                                }
+                                                else if (DateTime.Now > m.EndDate)
+                                                {
+                                                    <span class="badge bg-danger text-white">EXPIRED</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-primary text-white">UPCOMING</span>
+                                                }
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-footer">
+                                    <p class="card-text d-flex justify-content-between">
+                                        <a class="btn btn-sm btn-outline-primary" title="See Details"><i class="bi bi-eye-fill me-sm-1"></i> Details</a>
+                                        <span class="text-danger fw-semibold mt-sm-1">@m.Price.ToString("BDT 0.0")</span>
+                                        <a class="btn btn-sm btn-outline-warning" title="Add to cart"><i class="bi bi-cart-plus me-sm-1"></i>Add to cart</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

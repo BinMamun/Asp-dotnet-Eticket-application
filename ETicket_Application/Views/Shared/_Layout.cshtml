@@ -4,45 +4,66 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ETicket_Application</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/libs/bootstrap/js/bootstrap.bundle.js"></script>
+    <link href="~/libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/site.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    @await RenderSectionAsync("Styles", false)
 </head>
-<body>
+<body style="background-color: lightgrey">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-dark bg-warning box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">eTicket</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <a class="navbar-brand" asp-controller="Movies" asp-action="Index">eTicket</a>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light flex-grow-1" asp-controller="Movies" asp-action="Index"><i class="bi bi-film me-sm-1"></i>Movies</a>
+                        </li>     
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-gear"></i>
+                                Management
+                            </a>
+                            <ul class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item text-dark flex-grow-1" asp-controller="Cinemas" asp-action="Index"><i class="bi bi-camera-reels me-sm-1"></i>Cinemas</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-dark flex-grow-1" asp-controller="Producers" asp-action="Index"><i class="bi bi-person-fill-gear me-sm-1"></i>Producers</a>
+                                </li>
+                                <li>
+                                <li>
+                                    <a class="dropdown-item text-dark flex-grow-1" asp-controller="Actors" asp-action="Index"><i class="bi bi-person-square me-sm-1"></i>Actors</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
+
+                    <form class="d-flex ms-auto form-check-inline my-lg-0 " asp-controller="Movies" asp-action="Filter" style="padding-right:25px;">
+                        <input name="searchString"class="form-control me-2" type="search" placeholder="Search movie" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" title="search" type="submit"><i class="bi bi-search "></i></button>
+                    </form>                    
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - ETicket_Application - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container d-flex justify-content-center" >
+            &copy; 2023 - ETicket_Application
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    
+    @await RenderSectionAsync("Scripts", false)
 </body>
 </html>
+
+

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Actor>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row container offset-1">
+    <h3 class="mb-3 display-6 text-dark text-center">Actors List</h3>
+    <hr />
+    <div class="col-12 d-flex justify-content-end mb-2">
+        <a asp-action="Create" asp-controller="Actors" class="btn btn-warning" title="Add new"><i class="bi bi-plus-square"></i></a>
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        <table class="table table-hover box-shadow table-borderless">
+            <thead>
+                <tr class="table-warning text-center">
+                    <th class="">Profile Picture</th>
+                    <th>Name</th>
+                    <th>Biography</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var a in Model)
+                {
+                    <tr class="text-center align-middle">
+                        <td>
+                            <img src="@a.ProfilePicture" width="50" class="rounded-circle img" />
+                        </td>
+                        <td>@a.ActorName</td>
+                        <td>@a.Biography</td>
+                        <td>
+                            <a asp-action="Edit" asp-controller="Actors" asp-route-ActorId="@a.ActorId" class="btn btn-outline-primary" title="Edit"><i class="bi bi-pencil-square"></i></a>
+                            <a asp-action="Detail" asp-controller="Actors" asp-route-ActorId="@a.ActorId" class="btn btn-outline-info" title="Detail"><i class="bi bi-eye"></i></a>
+                            <a asp-action="Delete" asp-controller="Actors" asp-route-ActorId="@a.ActorId" class="btn btn-outline-danger" title="Delete"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
