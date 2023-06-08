@@ -9,7 +9,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+  color: #fff;
 }
 
 .btn-primary {
@@ -59,8 +59,9 @@ html {
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: lightgrey;
 }
 .footer {
   position: absolute;
@@ -75,7 +76,25 @@ body {
     object-fit:cover;
 }
 
-    .img:hover {
-        transform: scale(1.5);
-        z-index: 2;
+.img:hover {
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+
+.dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: .5s ease all;
+}
+
+    .dropdown-menu.show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+        transition: .5s ease all;
+        margin-top: 0;
     }
