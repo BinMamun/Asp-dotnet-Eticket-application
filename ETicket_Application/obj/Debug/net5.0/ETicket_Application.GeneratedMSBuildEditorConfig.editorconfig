@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = ETicket_Application
-build_property.ProjectDir = D:\Complete E-Commerce Project\Asp-dotnet-Eticket-application\Asp-dotnet-Eticket-application\ETicket_Application\
+build_property.ProjectDir = D:\Movie E-Ticket Application\ETicket_Application\

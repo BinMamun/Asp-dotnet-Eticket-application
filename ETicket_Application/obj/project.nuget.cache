@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EEOV1PEFnfREGDWl7DKcacJFiAnFfs4Qyq8upMPeO+cqxL+4MTSVIzcuflpBOYcSiE1KVlW+tvSOX/9GuNFptg==",
+  "dgSpecHash": "lduse6jokEtyX6GzvLC3z1lT1ZXiOjJmpvUkSj9J2ON9zhkJT1ATagacCEpNDztHz5Aoy3OVDnYzohlWLY+CzA==",
   "success": true,
-  "projectFilePath": "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\ETicket_Application.csproj",
+  "projectFilePath": "D:\\Movie E-Ticket Application\\ETicket_Application\\ETicket_Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ideapad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ideapad\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

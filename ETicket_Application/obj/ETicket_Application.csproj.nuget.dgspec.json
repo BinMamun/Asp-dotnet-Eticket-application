@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\ETicket_Application.csproj": {}
+    "D:\\Movie E-Ticket Application\\ETicket_Application\\ETicket_Application.csproj": {}
   },
   "projects": {
-    "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\ETicket_Application.csproj": {
+    "D:\\Movie E-Ticket Application\\ETicket_Application\\ETicket_Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\ETicket_Application.csproj",
+        "projectUniqueName": "D:\\Movie E-Ticket Application\\ETicket_Application\\ETicket_Application.csproj",
         "projectName": "ETicket_Application",
-        "projectPath": "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\ETicket_Application.csproj",
+        "projectPath": "D:\\Movie E-Ticket Application\\ETicket_Application\\ETicket_Application.csproj",
         "packagesPath": "C:\\Users\\ideapad\\.nuget\\packages\\",
-        "outputPath": "D:\\Complete E-Commerce Project\\Asp-dotnet-Eticket-application\\Asp-dotnet-Eticket-application\\ETicket_Application\\obj\\",
+        "outputPath": "D:\\Movie E-Ticket Application\\ETicket_Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

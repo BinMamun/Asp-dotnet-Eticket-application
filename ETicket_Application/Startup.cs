@@ -1,4 +1,6 @@
 using ETicket_Application.Data;
+using ETicket_Application.Data.ServiceClasses;
+using ETicket_Application.Data.ServicesInterface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,8 +26,12 @@ namespace ETicket_Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //DbContext Configure
+            //Default Configuraration
             services.AddDbContext<AppDbContext>(option=> option.UseSqlServer(Configuration.GetConnectionString("eticketDb")));
+
+
+            //Services Configuation
+            services.AddScoped<IActorsService, ActorsService>();
             services.AddControllersWithViews();
         }
 
