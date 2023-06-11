@@ -300,3 +300,4 @@ D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Appli
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ref\ETicket_Application.dll
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.pdb
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.genruntimeconfig.cache
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Actors\Create.cshtml.g.cs

@@ -79,7 +79,7 @@ body {
     z-index: 2;
 }
 
-@*dropdown animation*@
+/*dropdown animation*/
 .dropdown-menu {
     display: block;
     visibility: hidden;

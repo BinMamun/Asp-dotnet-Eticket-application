@@ -20,5 +20,11 @@ namespace ETicket_Application.Controllers
         {            
             return View(await _service.GetAllActors());
         }
+        //Get: Actors?Create
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
