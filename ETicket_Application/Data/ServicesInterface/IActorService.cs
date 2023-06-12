@@ -8,10 +8,10 @@ namespace ETicket_Application.Data.ServicesInterface
 {
     public interface IActorsService
     {
-        Task<IEnumerable<Actor>> GetAllActors();
-        Actor ActorById(int id);
-        void Create(Actor actor);
-        Actor Edit(int id, Actor actor);
-        void Delete(int id);
+        Task<IEnumerable<Actor>> GetAllActorsAsync();
+        Task <Actor> ActorByIdAsync(int id);
+        Task CreateAsync(Actor actor);
+        Task<Actor> EditAsync(int id, Actor actor);
+        Task DeleteAsync(int id);
     }
 }

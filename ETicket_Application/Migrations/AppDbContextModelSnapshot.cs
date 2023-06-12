@@ -32,11 +32,11 @@ namespace ETicket_Application.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Biography")
+                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("ProfilePicture")
-                        .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)");
 

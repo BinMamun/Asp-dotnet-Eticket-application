@@ -15,30 +15,29 @@ namespace ETicket_Application.Data.ServiceClasses
         {
             _db = db;
         }
-        public async Task<IEnumerable<Actor>> GetAllActors()
+        public async Task<IEnumerable<Actor>> GetAllActorsAsync()
         {
             return await _db.Actors.ToListAsync();
         }
-        public Actor ActorById(int id)
+        
+        public async Task<Actor> ActorByIdAsync(int id)
+        {
+            return await _db.Actors.FirstAsync(x => x.ActorId == id);
+        }
+        public async Task CreateAsync(Actor actor)
+        {
+            await _db.Actors.AddAsync(actor);
+            await _db.SaveChangesAsync();
+        }
+        public Task<Actor> EditAsync(int id, Actor actor)
         {
             throw new NotImplementedException();
         }
 
-        public void Create(Actor actor)
+        public Task DeleteAsync(int id)
         {
             throw new NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Actor Edit(int id, Actor actor)
-        {
-            throw new NotImplementedException();
-        }
-
+        }      
         
     }
 }
