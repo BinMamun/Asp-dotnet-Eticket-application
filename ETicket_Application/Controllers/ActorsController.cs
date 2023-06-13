@@ -18,11 +18,10 @@ namespace ETicket_Application.Controllers
             _service = service;
         }
         public async Task<IActionResult> Index()
-        {            
+        {
             return View(await _service.GetAllActorsAsync());
         }
-        //Get: Actors?Create
-
+        //Get: Actors/Create
         public IActionResult Create()
         {
             return View();
@@ -41,13 +40,25 @@ namespace ETicket_Application.Controllers
 
         //Get: Actors/Details/1
         public async Task<IActionResult> Details(int id)
-        {
-            var actorDetails = await _service.ActorByIdAsync(id);
-            if (actorDetails == null)
-                return View("Empty");
-            return View(actorDetails);
+        {    
+            return View(await _service.ActorByIdAsync(id));
         }
 
-        //Get: Actors/Edit/1       
+        //Get: Actors/Edit/1
+        public async Task<IActionResult> Edit(int id)
+        {            
+            return View(await _service.ActorByIdAsync(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, Actor actor)
+        {
+            if (ModelState.IsValid)
+            {
+                await _service.EditAsync(id, actor);
+                return RedirectToAction("Index");
+            }
+            return View(actor);
+        }
     }
 }

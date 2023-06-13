@@ -29,9 +29,11 @@ namespace ETicket_Application.Data.ServiceClasses
             await _db.Actors.AddAsync(actor);
             await _db.SaveChangesAsync();
         }
-        public Task<Actor> EditAsync(int id, Actor actor)
+        public async Task<Actor> EditAsync(int id, Actor actor)
         {
-            throw new NotImplementedException();
+            _db.Update(actor);
+            await _db.SaveChangesAsync();
+            return actor;
         }
 
         public Task DeleteAsync(int id)
