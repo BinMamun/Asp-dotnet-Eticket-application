@@ -1,4 +1,5 @@
 ﻿using ETicket_Application.Data;
+using ETicket_Application.Data.ServicesInterface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,14 +11,14 @@ namespace ETicket_Application.Controllers
 {
     public class ProducersController : Controller
     {
-        private readonly AppDbContext _db;
-        public ProducersController (AppDbContext db)
+        private readonly IProducersService _service;
+        public ProducersController (IProducersService service)
         {
-            _db = db;
+            _service = service;
         }
         public async Task<IActionResult> Index()
         {            
-            return View(await _db.Producers.ToListAsync());
+            return View(await _service.GetAllAsync());
         }
     }
 }

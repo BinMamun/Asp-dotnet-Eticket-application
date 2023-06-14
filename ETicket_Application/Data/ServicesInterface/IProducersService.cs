@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ETicket_Application.Data.ServicesInterface
 {
-    public interface IActorsService: IEntityBaseRepository<Actor>
+    public interface IProducersService : IEntityBaseRepository<Producer>
     {
     }
 }

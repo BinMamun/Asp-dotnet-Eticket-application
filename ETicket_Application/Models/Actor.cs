@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ETicket_Application.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -7,10 +8,9 @@ using System.Threading.Tasks;
 
 namespace ETicket_Application.Models
 {
-    public class Actor
+    public class Actor: IEntityBase
     {
-        
-        public int ActorId { get; set; }
+        public int Id { get; set; }
         [StringLength(150), Display(Name = "Profile Picture")]
         public string ProfilePicture { get; set; } = "https://img.freepik.com/free-vector/gradient-no-photo-sign_23-2149276163.jpg?w=740&t=st=1686590099~exp=1686590699~hmac=fd347fb35b69b2dc627ae3d944288ab4f2fa6567f03f67d954ba9e74c7c3431a";
         [Required, StringLength(50), Display(Name = "Actor Name")]

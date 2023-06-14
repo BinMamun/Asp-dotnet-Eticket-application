@@ -19,7 +19,7 @@ namespace ETicket_Application.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _service.GetAllActorsAsync());
+            return View(await _service.GetAllAsync());
         }
         //Get: Actors/Create
         public IActionResult Create()
@@ -40,14 +40,24 @@ namespace ETicket_Application.Controllers
 
         //Get: Actors/Details/1
         public async Task<IActionResult> Details(int id)
-        {    
-            return View(await _service.ActorByIdAsync(id));
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            if(actorDetails == null)
+            {
+                return View("NotFound");
+            }
+            return View(actorDetails);
         }
 
         //Get: Actors/Edit/1
         public async Task<IActionResult> Edit(int id)
-        {            
-            return View(await _service.ActorByIdAsync(id));
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            if (actorDetails == null)
+            {
+                return View("NotFound");
+            }
+            return View(actorDetails);
         }
 
         [HttpPost]
@@ -59,6 +69,24 @@ namespace ETicket_Application.Controllers
                 return RedirectToAction("Index");
             }
             return View(actor);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            if (actorDetails == null)
+            {
+                return View("NotFound");
+            }
+            return View(actorDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirm(int id)
+        {
+            var actorDetails = await _service.GetByIdAsync(id);
+            await _service.DeleteAsync(id);
+            return RedirectToAction("Index"); 
         }
     }
 }

@@ -32,6 +32,8 @@ namespace ETicket_Application
 
             //Services Configuation
             services.AddScoped<IActorsService, ActorsService>();
+            services.AddScoped<IProducersService, ProducersService>();
+            services.AddScoped<IMovieCategoriesService, MovieCategoriesService>();
             services.AddControllersWithViews();
         }
 

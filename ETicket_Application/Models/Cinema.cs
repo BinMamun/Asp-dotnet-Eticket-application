@@ -8,7 +8,7 @@ namespace ETicket_Application.Models
 {
     public class Cinema
     {
-        public int CinemaId { get; set; }
+        public int Id { get; set; }
         [Required, StringLength(150)]
         public string Logo { get; set; }
         [Required, StringLength(50), Display(Name = "Cinema")]

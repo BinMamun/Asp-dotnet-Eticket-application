@@ -9,7 +9,7 @@ namespace ETicket_Application.Models
 {
     public class Movie
     {
-        public int MovieId { get; set; }
+        public int Id { get; set; }
         [Required, StringLength(50), Display(Name = "Movie Name")]
         public string Name { get; set; }
         [StringLength(200)]

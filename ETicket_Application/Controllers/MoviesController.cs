@@ -35,10 +35,10 @@ namespace ETicket_Application.Controllers
         }
         public async Task<IActionResult> MoviesByProducers(int id)
         {
-            ViewBag.ProducerName = _db.Producers.First(x => x.ProducerId == id).ProducerName;            
-            ViewBag.Count = _db.Movies.Where(x => x.ProducerId == id).Count();
+            ViewBag.ProducerName = _db.Producers.First(x => x.Id == id).ProducerName;            
+            ViewBag.Count = _db.Movies.Where(x => x.Id == id).Count();
             return View(await _db.Movies
-                .Where(x=> x.ProducerId==id)
+                .Where(x=> x.Id==id)
                 .Include(x => x.MovieCategory)
                 .Include(x => x.Producer)
                 .ToListAsync());
