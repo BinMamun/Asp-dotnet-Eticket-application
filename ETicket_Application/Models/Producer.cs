@@ -10,11 +10,11 @@ namespace ETicket_Application.Models
     public class Producer: IEntityBase
     {
         public int Id { get; set; }
-        [Required, StringLength(150), Display(Name = "Profile Picture")]
+        [StringLength(150), Display(Name = "Profile Picture")]
         public string ProfilePicture { get; set; }
         [Required, StringLength(50), Display(Name = "Producer Name")]
         public string ProducerName { get; set; }
-        [ StringLength(200)]
+        [Required, StringLength(100)]
         public string Biography { get; set; }
 
         //Relationships

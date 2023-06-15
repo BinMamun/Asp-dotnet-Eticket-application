@@ -63,7 +63,7 @@ namespace ETicket_Application.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(int id, Actor actor)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && actor.Id == id)
             {
                 await _service.EditAsync(id, actor);
                 return RedirectToAction("Index");
@@ -84,7 +84,6 @@ namespace ETicket_Application.Controllers
         [HttpPost, ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirm(int id)
         {
-            var actorDetails = await _service.GetByIdAsync(id);
             await _service.DeleteAsync(id);
             return RedirectToAction("Index"); 
         }

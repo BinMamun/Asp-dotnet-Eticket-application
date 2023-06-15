@@ -1,4 +1,5 @@
 ﻿using ETicket_Application.Data;
+using ETicket_Application.Data.ServicesInterface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,14 +11,14 @@ namespace ETicket_Application.Controllers
 {
     public class CinemasController : Controller
     {
-        private readonly AppDbContext _db;
-        public CinemasController(AppDbContext db)
+        private readonly ICinemasService _service;
+        public CinemasController(ICinemasService service)
         {
-            _db = db;
+            _service = service;
         }
         public async Task<IActionResult> Index()
         {           
-            return View(await _db.Cinemas.ToListAsync());
+            return View(await _service.GetAllAsync());
         }
     }
 }

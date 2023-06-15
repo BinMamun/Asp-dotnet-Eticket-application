@@ -1,11 +1,11 @@
-﻿@model Actor
+﻿@model Producer
 @{
-    ViewData["Title"] = "Actor Details";
+    ViewData["Title"] = "Producer Details";
 }
 
 <div class="row text">
     <div class="col-md-8 offset-2">
-        <h1 class="display-6">Actor Details</h1>
+        <h1 class="display-6">Details of <strong>@Model.ProducerName</strong></h1>
         <hr />
     </div>
     <div class="row">
@@ -20,8 +20,8 @@
                 </div>
 
                 <div class="col-10 mb-2">
-                    <label asp-for="ActorName" class="col-form-label"></label>
-                    <input asp-for="ActorName" class="form-control" placeholder="Actor Name" readonly />
+                    <label asp-for="ProducerName" class="col-form-label"></label>
+                    <input asp-for="ProducerName" class="form-control" placeholder="Producer Name" readonly />
                 </div>
 
                 <div class="col-10 mb-2">
