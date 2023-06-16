@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ETicket_Application.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ETicket_Application.Models
 {
-    public class Movie
+    public class Movie: IEntityBase
     {
         public int Id { get; set; }
         [Required, StringLength(50), Display(Name = "Movie Name")]
