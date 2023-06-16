@@ -10,11 +10,11 @@ namespace ETicket_Application.Models
     public class Cinema:IEntityBase
     {
         public int Id { get; set; }
-        [Required, StringLength(150)]
+        [StringLength(150)]
         public string Logo { get; set; }
         [Required, StringLength(50), Display(Name = "Cinema")]
         public string Name { get; set; }
-        [ StringLength(200)]
+        [Required,StringLength(100)]
         public string Description { get; set; }
         //Relationships
         public List<Movie> Movies { get; set; }

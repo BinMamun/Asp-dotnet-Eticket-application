@@ -1,0 +1,60 @@
+﻿@model Cinema
+@{
+    ViewData["Title"] = "Add new Cinema";
+}
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <h1 class="display-6">Add new Cinema</h1>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <form method="post" asp-action="Create" asp-controller="Cinemas">
+                <div class="form-group">
+                    <div class="col-md-3 offset-3" style="margin-right: 30px;">
+                        <img id="ProfilePicturePreview" class="imgPreview" />
+                    </div>
+                    <div class="col-md-10 mb-2">
+                        <label asp-for="Logo" class="col-form-label"></label>
+                        <input asp-for="Logo" class="form-control" placeholder="Logo Url" />
+                        <span asp-validation-for="Logo" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-10 mb-2">
+                        <label asp-for="Name" class="col-form-label"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Cinema Name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-10 mb-2">
+                        <label asp-for="Description" class="col-form-label"></label>
+                        <textarea asp-for="Description" class="form-control" placeholder="Description"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-10">
+                        <a class="btn btn-outline-secondary float-start" asp-action="Index">Back</a>
+                        <button type="submit" class="btn btn-warning float-end" asp-action="Create">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/libs/Jquery/jquery.js"></script>
+    <script src="~/libs/validate/jquery.validate.js"></script>
+    <script src="~/libs/unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script>
+        //$(document).ready(function () {
+        //    var output = document.getElementById('ProfilePicturePreview');
+        //    output.src = $("#Logo").val();
+        //})
+        $("#Logo").on("change", function () {
+            var output = document.getElementById('ProfilePicturePreview');
+            output.src = $(this).val();
+        })
+    </script>
+}
