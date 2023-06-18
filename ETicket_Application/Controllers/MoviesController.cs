@@ -16,33 +16,31 @@ namespace ETicket_Application.Controllers
         {
             _service = service;
         }
-        //public async Task<IActionResult> Index()
-        //{
-        //    return View(await _db.Movies
-        //        .Include(x => x.MovieCategory)
-        //        .Include(x => x.Producer)
-        //        .Include(x=> x.Cinema)
-        //        .ToListAsync()); 
-        //}
+        public async Task<IActionResult> Index()
+        {
+            return View(await _service.GetAllAsync(x=> x.Cinema, y=> y.MovieCategory, z=> z.Producer));
+        }
 
-        //public async Task<IActionResult> ListIndex()
-        //{
-        //    ViewBag.Count = _db.Movies.Count();
-        //    return View(await _db.Movies
-        //        .Include(x => x.MovieCategory)
-        //        .Include(x => x.Producer)
-        //        .Include(x => x.Cinema)
-        //        .ToListAsync());
-        //}
-        //public async Task<IActionResult> MoviesByProducers(int id)
-        //{
-        //    ViewBag.ProducerName = _db.Producers.First(x => x.Id == id).ProducerName;            
-        //    ViewBag.Count = _db.Movies.Where(x => x.Id == id).Count();
-        //    return View(await _db.Movies
-        //        .Where(x=> x.Id==id)
-        //        .Include(x => x.MovieCategory)
-        //        .Include(x => x.Producer)
-        //        .ToListAsync());
-        //}
+        public async Task<IActionResult> ListIndex()
+        {
+            ViewBag.Count = _service.CountAsync();
+            return View(await _service.GetAllAsync(x => x.Cinema, y => y.MovieCategory, z => z.Producer));
+        }
+        
+        public async Task<IActionResult> MoviesByProducers(int id)
+        {
+            ViewBag.Count = _service.CountByProducer(id);
+            return View(await _service.GetMoviesByProducersAsync(id));
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            return View(await _service.GetMovieByIdAsync(id));
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }

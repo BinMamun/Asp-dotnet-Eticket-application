@@ -101,7 +101,7 @@ namespace ETicket_Application.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
@@ -121,7 +121,7 @@ namespace ETicket_Application.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("Date");
 
                     b.HasKey("Id");
 

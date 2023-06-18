@@ -9,5 +9,9 @@ namespace ETicket_Application.Data.ServicesInterface
 {
     public interface IMoviesService : IEntityBaseRepository<Movie>
     {
+        Task<Movie> GetMovieByIdAsync(int id);
+        Task<IEnumerable<Movie>> GetMoviesByProducersAsync(int id);
+        int CountAsync();
+        int CountByProducer(int id);
     }
 }

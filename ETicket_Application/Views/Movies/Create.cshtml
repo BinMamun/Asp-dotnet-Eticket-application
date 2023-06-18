@@ -1,0 +1,115 @@
+﻿@model MovieViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row offset-3">
+    <div class="col-md-8">
+        <h1 class="display-6">Create new Movie</h1>
+        <hr />
+    </div>
+    <div class="row">
+        <div class="col-md-8 ">
+            <form method="post" asp-action="Create" asp-controller="Movies">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Name" class="col-form-label"></label>
+                            <input asp-for="Name" class="form-control col-4" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="StartDate" class="col-form-label"></label>
+                            <input asp-for="StartDate" class="form-control col-4" type="date" />
+                            <span asp-validation-for="StartDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CinemaId" class="col-form-label"></label>
+                            <select asp-for="CinemaId" class="form-select col-4"></select>
+                            <span asp-validation-for="CinemaId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Price" class="col-form-label"></label>
+                            <input asp-for="Price" class="form-control col-4" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Image" class="col-form-label"></label>
+                            <input asp-for="Image" class="form-control col-4" />
+                            <span asp-validation-for="Image" class="text-danger"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="MovieCategoryId" class="col-form-label"></label>
+                            <select asp-for="MovieCategoryId" class="form-select">
+                            </select>
+                            <span asp-validation-for="MovieCategoryId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="EndDate" class="col-form-label"></label>
+                            <input asp-for="EndDate" class="form-control col-4" type="date" />
+                            <span asp-validation-for="EndDate" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="ProducerId" class="col-form-label"></label>
+                            <select asp-for="ProducerId" class="form-select col-4"></select>
+                            <span asp-validation-for="ProducerId" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="ActorIds" class="col-form-label"></label>
+                            <select asp-for="ActorIds" class="form-select col-4" multiple></select>
+                            <span asp-validation-for="ActorIds" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label asp-for="Description" class="col-form-label"></label>
+                        <textarea asp-for="Description" class="form-control col-4"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                @* <div class="col-md-4 offset-4 text-center mt-2">
+                <img width="100%" class="imgPreview" id="ImagePreview" />
+                </div>*@
+
+                <div class="form-group mt-2">
+                    <a asp-action="ListIndex" class="btn btn-outline-danger float-start">Cancel</a>
+                    <button type="submit" class="btn btn-warning float-end">Save</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4 text-center mt-2">
+            <img width="100%" class="imgPreviewCreate" id="ImagePreview" />
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/libs/jquery/jquery.js"></script>
+    <script src="~/libs/validate/jquery.validate.js"></script>
+    <script src="~/libs/unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script>
+        $("#Image").on("change", function () {
+            var output = document.getElementById("ImagePreview");
+            output.src = $(this).val();
+        })
+    </script>
+}
+
+@section Styles{
+    <styles>
+        .imgPreviewCreate {
+        width: 150px;
+        height: 150px;
+        border: 3px solid white;
+        border-radius: 3px;
+        object-fit: cover;
+        }
+    </styles>
+}
+

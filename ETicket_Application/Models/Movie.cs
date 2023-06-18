@@ -15,9 +15,9 @@ namespace ETicket_Application.Models
         public string Name { get; set; }
         [StringLength(200)]
         public string Description { get; set; }
-        [Required,Display(Name = "Start Date")]
+        [Required, Display(Name = "Start Date"), Column(TypeName = "Date")]
         public DateTime StartDate { get; set; }
-        [Required, Display(Name = "End Date")]
+        [Required, Display(Name = "End Date"), Column(TypeName = "Date")]
         public DateTime EndDate { get; set; }
         [Required,Column(TypeName ="money"), DisplayFormat(DataFormatString ="{0:0.00}")]
         public double Price { get; set; }

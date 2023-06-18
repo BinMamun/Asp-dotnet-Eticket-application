@@ -157,7 +157,6 @@ D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Appli
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.runtimeconfig.json
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.runtimeconfig.dev.json
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.dll
-D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ref\ETicket_Application.dll
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.pdb
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.Views.dll
 D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ETicket_Application.Views.pdb
@@ -276,7 +275,6 @@ D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Appli
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.RazorAssemblyInfo.cache
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.RazorAssemblyInfo.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\ETicket_Application.StaticWebAssets.Manifest.cache
-D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\ETicket_Application.StaticWebAssets.xml
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\scopedcss\bundle\ETicket_Application.styles.css
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.TagHelpers.input.cache
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\ETicket_Application.TagHelpers.output.cache
@@ -313,3 +311,7 @@ D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\C
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Cinemas\Create.cshtml.g.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Cinemas\Edit.cshtml.g.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Cinemas\Delete.cshtml.g.cs
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Movies\Create.cshtml.g.cs
+D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ref\ETicket_Application.dll
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\ETicket_Application.StaticWebAssets.xml

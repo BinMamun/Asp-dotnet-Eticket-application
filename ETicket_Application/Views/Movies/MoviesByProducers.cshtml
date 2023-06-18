@@ -1,11 +1,12 @@
 ﻿@model IEnumerable<Movie>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "ListIndex";
 }
 
-<div class="row container-fluid">
-    <h3 class="mb-3 display-6 text-dark text-center">Movies Of @ViewBag.ProducerName</h3>
-    <hr/>
+
+<div class="row">
+    <h3 class="mb-3 display-6 text-dark text-center">Movies List By Producer</h3>
+    <hr />
     <div class="col-2">
         <span class="fs-5">Total Movies: @ViewBag.Count</span>
     </div>
@@ -13,7 +14,7 @@
         <a asp-action="Create" asp-controller="Movies" class="btn btn-warning" title="Add new"><i class="bi bi-plus-square"></i></a>
     </div>
     <div class="col-12 d-flex justify-content-center">
-        <table class="table table-hover box-shadow table-borderless">
+        <table class="table table-hover box-shadow table-borderless ">
             <thead>
                 <tr class="table-warning text-center">
                     <th>Poster</th>
@@ -43,9 +44,9 @@
                         <td>@m.Price</td>
 
                         <td>
-                            <a asp-action="Edit" asp-controller="Movies" asp-route-ActorId="@m.Id" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
-                            <a asp-action="Detail" asp-controller="Movies" asp-route-ActorId="@m.Id" class="btn btn-outline-info"><i class="bi bi-eye"></i></a>
-                            <a asp-action="Delete" asp-controller="Movies" asp-route-ActorId="@m.Id" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>
+                            <a asp-action="Edit" asp-controller="Movies" asp-route-id="@m.Id" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
+                            <a asp-action="Details" asp-controller="Movies" asp-route-id="@m.Id" class="btn btn-outline-info"><i class="bi bi-eye"></i></a>
+                            <a asp-action="Delete" asp-controller="Movies" asp-route-id="@m.Id" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>
                         </td>
                     </tr>
                 }
