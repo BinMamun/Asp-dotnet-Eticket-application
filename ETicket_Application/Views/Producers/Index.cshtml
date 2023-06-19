@@ -6,9 +6,7 @@
 <div class="row container offset-1">
     <h3 class="mb-3 display-6 text-dark text-center">Producers List</h3>
     <hr />
-    <div class="col-12 d-flex justify-content-end mb-2">
-        <a asp-action="Create" asp-controller="Producers" class="btn btn-warning" title="Add new"><i class="bi bi-plus-square"></i></a>
-    </div>
+    @await Html.PartialAsync("_CreateNew", "Producers")
     <div class="col-12 d-flex justify-content-center">
         <table class="table table-hover box-shadow table-borderless">
             <thead>

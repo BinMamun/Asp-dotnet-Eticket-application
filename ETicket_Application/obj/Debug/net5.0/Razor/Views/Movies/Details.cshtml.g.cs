@@ -35,7 +35,9 @@ using ETicket_Application.Data.ViewModels;
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bc15f1939656b56ec82955520034ae8f31a3d24a", @"/Views/Movies/Details.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"584015f7f8e6127909dede5d3e0195ddd790a6bd", @"/Views/_ViewImports.cshtml")]
+    #nullable restore
     public class Views_Movies_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Movie>
+    #nullable disable
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_1 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Details", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -122,7 +124,7 @@ WriteAttributeValue("", 837, Model.Image, 837, 12, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                                        <p class=\"card-text\">\r\n                                            <b>Cinema:</b>\r\n                                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a8465", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a8511", async() => {
                 WriteLiteral("\r\n                                                ");
 #nullable restore
 #line 30 "D:\Movie E-Ticket Application\ETicket_Application\Views\Movies\Details.cshtml"
@@ -172,7 +174,7 @@ WriteAttributeValue("", 837, Model.Image, 837, 12, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                                        <p class=\"card-text\">\r\n                                            <b>Producer:</b>\r\n                                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a11952", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a11998", async() => {
                 WriteLiteral("\r\n                                                ");
 #nullable restore
 #line 37 "D:\Movie E-Ticket Application\ETicket_Application\Views\Movies\Details.cshtml"
@@ -291,7 +293,7 @@ WriteAttributeValue("", 3918, a.Actor.ProfilePicture, 3918, 23, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(" style=\"width:100px; height:100px; object-fit:cover\" />\r\n                                                        <br />\r\n                                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a18787", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a18833", async() => {
                 WriteLiteral("\r\n                                                            ");
 #nullable restore
 #line 67 "D:\Movie E-Ticket Application\ETicket_Application\Views\Movies\Details.cshtml"
@@ -350,7 +352,7 @@ WriteAttributeValue("", 3918, a.Actor.ProfilePicture, 3918, 23, false);
                             <div class=""card-footer"">
                                 <p class=""card-text d-flex justify-content-between"">
                                     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a22491", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bc15f1939656b56ec82955520034ae8f31a3d24a22537", async() => {
                 WriteLiteral("Back");
             }
             );
@@ -391,16 +393,26 @@ WriteAttributeValue("", 3918, a.Actor.ProfilePicture, 3918, 23, false);
 ");
         }
         #pragma warning restore 1998
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IUrlHelper Url { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.IViewComponentHelper Component { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; } = default!;
+        #nullable disable
+        #nullable restore
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Movie> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<Movie> Html { get; private set; } = default!;
+        #nullable disable
     }
 }
 #pragma warning restore 1591

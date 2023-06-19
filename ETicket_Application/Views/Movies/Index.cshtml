@@ -5,6 +5,7 @@
 
 
 <div class="row">
+    @await Html.PartialAsync("_CreateNew", "Movies")
     @foreach (var m in Model)
     {
         <div class="col-md-4 col-xs-6 border-warning mb-2">

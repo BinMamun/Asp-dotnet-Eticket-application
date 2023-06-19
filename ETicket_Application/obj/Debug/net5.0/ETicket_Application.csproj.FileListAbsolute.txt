@@ -312,6 +312,11 @@ D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\C
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Cinemas\Edit.cshtml.g.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Cinemas\Delete.cshtml.g.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Movies\Details.cshtml.g.cs
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\ETicket_Application.StaticWebAssets.Pack.cache
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\msbuild.ETicket_Application.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\msbuild.build.ETicket_Application.props
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.ETicket_Application.props
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.ETicket_Application.props
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\refint\ETicket_Application.dll
+D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Shared\_CreateNew.cshtml.g.cs
 D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\Razor\Views\Movies\Create.cshtml.g.cs
-D:\Movie E-Ticket Application\ETicket_Application\bin\Debug\net5.0\ref\ETicket_Application.dll
-D:\Movie E-Ticket Application\ETicket_Application\obj\Debug\net5.0\staticwebassets\ETicket_Application.StaticWebAssets.xml
